@@ -65,11 +65,17 @@ inserts a node into the tree
             inOrderTraversal(root.right);        // Visit the right subtree
         }
     }
-    /*
-    post-order traversal
-    */
-    public void postOrderTraversal(Node root){
-//implement in here
+    /**
+     * Performs a post-order traversal of the tree and prints the values of each node.
+     *
+     * @param root The root of the subtree to traverse.
+     */
+    public void postOrderTraversal(Node root) {
+        if (root != null) {
+            postOrderTraversal(root.left);       // Visit the left subtree
+            postOrderTraversal(root.right);      // Visit the right subtree
+            System.out.print(root.value + " "); // Visit the root
+        }
     }
     /*
     a method to find the node in the tree
