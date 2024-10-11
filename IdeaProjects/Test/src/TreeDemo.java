@@ -96,21 +96,39 @@ inserts a node into the tree
             return true; // Key found
         }
     }
-    /*
-    a method to find the node in the tree
-    with a smallest key
-    */
-    public int getMin(Node root){
-//implement in here
-        return 0;
+    /**
+     * Finds the minimum value in the tree.
+     *
+     * @param root The root of the subtree to search.
+     * @return The minimum value in the tree.
+     * @throws IllegalArgumentException if the tree is empty.
+     */
+    public int getMin(Node root) {
+        if (root == null) {
+            throw new IllegalArgumentException("Tree is empty");
+        }
+        Node current = root;
+        while (current.left != null) {
+            current = current.left; // Traverse to the leftmost node
+        }
+        return current.value; // Return the minimum value
     }
-    /*
-    a method to find the node in the tree
-    with a largest key
-    */
-    public int getMax(Node root){
-//implement in here
-        return 0;
+    /**
+     * Finds the maximum value in the tree.
+     *
+     * @param root The root of the subtree to search.
+     * @return The maximum value in the tree.
+     * @throws IllegalArgumentException if the tree is empty.
+     */
+    public int getMax(Node root) {
+        if (root == null) {
+            throw new IllegalArgumentException("Tree is empty");
+        }
+        Node current = root;
+        while (current.right != null) {
+            current = current.right; // Traverse to the rightmost node
+        }
+        return current.value; // Return the maximum value
     }
     /*
 this method will not compile until getMax
