@@ -77,13 +77,24 @@ inserts a node into the tree
             System.out.print(root.value + " "); // Visit the root
         }
     }
-    /*
-    a method to find the node in the tree
-    with a specific value
-    */
-    public boolean find(Node root, int key){
-//implement in here
-        return false;
+    /**
+     * Searches for a node with the specified key in the tree.
+     *
+     * @param root The root of the subtree to search.
+     * @param key  The key to search for.
+     * @return true if the key is found; false otherwise.
+     */
+    public boolean find(Node root, int key) {
+        if (root == null) {
+            return false; // Key not found
+        }
+        if (key < root.value) {
+            return find(root.left, key); // Search in the left subtree
+        } else if (key > root.value) {
+            return find(root.right, key); // Search in the right subtree
+        } else {
+            return true; // Key found
+        }
     }
     /*
     a method to find the node in the tree
