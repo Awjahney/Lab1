@@ -53,11 +53,17 @@ inserts a node into the tree
             preOrderTraversal(root.right);       // Visit the right subtree
         }
     }
-    /*
-    in-order traversal
-    */
-    public void inOrderTraversal(Node root){
-//implement in here
+    /**
+     * Performs an in-order traversal of the tree and prints the values of each node.
+     *
+     * @param root The root of the subtree to traverse.
+     */
+    public void inOrderTraversal(Node root) {
+        if (root != null) {
+            inOrderTraversal(root.left);         // Visit the left subtree
+            System.out.print(root.value + " "); // Visit the root
+            inOrderTraversal(root.right);        // Visit the right subtree
+        }
     }
     /*
     post-order traversal
