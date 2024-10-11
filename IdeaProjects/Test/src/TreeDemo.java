@@ -173,6 +173,18 @@ public class TreeDemo {
 
         System.out.print("in-order : ");
         t1.inOrderTraversal(t1.root);
+
+        System.out.print("\n" + "pre-order : ");
+        t1.preOrderTraversal(t1.root);
+
+        System.out.print("\n" + "post-order : ");
+        t1.postOrderTraversal(t1.root);
+
+        System.out.print("\n" + "finding root 24: " + t1.find(t1.root, 24));
+        System.out.print("\n" + "finding root 78: " + t1.find(t1.root, 78));
+
+        System.out.print("\n" + "getting min: " + t1.getMin(t1.root));
+        System.out.print("\n" + "getting max: " + t1.getMax(t1.root));
         System.out.println();
     }
 }
